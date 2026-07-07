@@ -19,4 +19,4 @@ RUN mkdir -p /app/storage && chmod 777 /app/storage
 
 EXPOSE 5000
 
-CMD ["gunicorn", "--workers", "3", "--bind", "0.0.0.0:5000", "--timeout", "300", "app:app"]
+CMD ["python", "app.py"]
