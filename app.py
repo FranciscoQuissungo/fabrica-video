@@ -1,6 +1,6 @@
 from flask import Flask
 
-app = Flask(name)
+app = Flask(_name_)
 
 @app.route("/")
 def home():
@@ -10,5 +10,5 @@ def home():
 def health():
     return {"status": "ok"}
 
-if name == "main":
+if _name_ == "_main_":
     app.run(host="0.0.0.0", port=8000)
