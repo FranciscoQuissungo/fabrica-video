@@ -1,10 +1,14 @@
 from flask import Flask
 
-app = Flask(__name__)
+app = Flask(name)
 
 @app.route("/")
 def home():
-    return "Fábrica de Vídeos Online!"
+    return "API de Vídeo Online!"
 
-if __name =="__main__":
-    app.run(host="0.0.0.0", port=5000)
+@app.route("/health")
+def health():
+    return {"status": "ok"}
+
+if name == "main":
+    app.run(host="0.0.0.0", port=8000)
